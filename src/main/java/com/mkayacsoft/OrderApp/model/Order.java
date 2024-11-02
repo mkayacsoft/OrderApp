@@ -12,8 +12,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "order")
+@Table(name = "_order")
 public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate orderDate;
     @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
