@@ -24,4 +24,8 @@ public class Customer {
     private Boolean orderAuthority;
     @OneToMany(mappedBy = "customer")
     private List<Order> orders;
+
+    public Boolean isOrderAuthority(){
+        return  orderAuthority;
+    }
 }

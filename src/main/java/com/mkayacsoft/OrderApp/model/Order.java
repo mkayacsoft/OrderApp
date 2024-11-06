@@ -23,4 +23,8 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
+    @PrePersist
+    protected void onCreate(){
+        this.orderDate=LocalDate.now();
+    }
 }

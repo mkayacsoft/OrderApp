@@ -12,6 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DTOOrderIU {
-    private List<OrderItem> items;
+    private List<DTOOrderItemIU> items;
     private Long customerId;
 }
